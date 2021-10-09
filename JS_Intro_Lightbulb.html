@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -23,4 +24,31 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    <script>
+        function click_turn() {
+            if (document.getElementById("light").getAttribute('src') == "pic_bulboff.gif") {
+                document.getElementById("light").setAttribute('src', "pic_bulbon.gif")
+            } else {
+                document.getElementById("light").setAttribute('src', "pic_bulboff.gif")
+            }
+        }
+    </script>
+    <base href="https://www.w3schools.com/js/">
+    <img id="light" src="pic_bulboff.gif" /><br/>
+    <button id="click" onclick="click_turn()"> Click </button>
+
+</body>
+
+>>>>>>> 587155ad7f198c9f5cc516e616c97dd53efaaa7d
 </html>
