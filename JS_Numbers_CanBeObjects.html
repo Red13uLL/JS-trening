@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<h3>Normally JavaScript numbers are primitive values created from literals:<br> let x = 123;<br> But numbers can also be defined as objects with the keyword new:<br> let y = new Number(123);</h3>
+
+<body>
+
+    <h2>JavaScript Numbers</h2>
+
+    <p>A number can be an object, but there is no need to create a number as an object.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let x = 123;
+        let y = new Number(123);
+        document.getElementById("demo").innerHTML = typeof x + "<br>" + typeof y;
+    </script>
+    <p>Do not create Number objects. It slows down execution speed.<br> The new keyword complicates the code. This can produce some unexpected results:<br> When using the == operator, equal numbers are equal:<br>Example<br></p>
+    <p>Never create numbers as objects.</p>
+    <p>Numbers and objects cannot be safely compared.</p>
+    <p id="demo1"></p>
+
+    <script>
+        let x1 = 500; // x1 is a number
+        let y1 = new Number(500); // y1 is an object
+        document.getElementById("demo1").innerHTML = (x1 == y1);
+    </script>
+    <p>When using the === operator, equal numbers are not equal, because the === operator<br> expects equality in both type and value.<br>Example:</p>
+    <p id="demo2"></p>
+
+    <script>
+        let x2 = 500; // x2 is a number
+        let y2 = new Number(500); // y2 is an object
+        document.getElementById("demo2").innerHTML = (x2 === y2);
+    </script>
+    <h4>Or even worse. Objects cannot be compared:</h4>
+    <p>Example:</p>
+    <p id="demo3"></p>
+
+    <script>
+        let x3 = new Number(500); // x3 is an object
+        let y3 = new Number(500); // y3 is an object
+        document.getElementById("demo3").innerHTML = (x3 == y3);
+    </script>
+</body>
+
+</html>
