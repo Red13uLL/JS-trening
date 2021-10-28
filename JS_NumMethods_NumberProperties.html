@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Number Properties</h2>
+
+    <p>MAX_VALUE returns the largest possible number in JavaScript.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let x = Number.MAX_VALUE;
+        document.getElementById("demo").innerHTML = x;
+    </script>
+    <p>MIN_VALUE returns the smallest number possible in JavaScript.</p>
+    <p id="demo1"></p>
+
+    <script>
+        let x1 = Number.MIN_VALUE;
+        document.getElementById("demo1").innerHTML = x1;
+    </script>
+    <p>POSITIVE_INFINITY</p>
+    <p id="demo2"></p>
+
+    <script>
+        let x2 = Number.POSITIVE_INFINITY;
+        document.getElementById("demo2").innerHTML = x2;
+    </script>
+    <p>NEGATIVE_INFINITY</p>
+
+    <p id="demo3"></p>
+
+    <script>
+        let x3 = Number.NEGATIVE_INFINITY;
+        document.getElementById("demo3").innerHTML = x3;
+    </script>
+    <p>JavaScript NaN - Not a Number</p>
+    <p>NaN is a JavaScript reserved word indicating that a number is not a legal number.</p>
+    <p id="demo4"></p>
+    <script>
+        document.getElementById("demo4").innerHTML =
+            Number.NaN;
+    </script>
+    <h3>Number Properties Cannot be Used on Variables</h3>
+    <p>Using a Number property on a variable, expression, or value, will return undefined:</p>
+
+    <p id="demo5"></p>
+
+    <script>
+        let x5 = 6;
+        document.getElementById("demo5").innerHTML = x5.MAX_VALUE;
+    </script>
+
+</body>
+
+</html>
+
+
+</body>
+
+</html>
