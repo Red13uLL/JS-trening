@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<h4>const points = [40];<br><br> is not the same as:<br>
+    <br><br> const points = new Array(40);<br> // Create an array with one element:<br> const points = [40];</h4>
+<p id="demo"></p>
+<script>
+    var points = [40];
+    document.getElementById("demo").innerHTML = points;
+</script>
+<p id="demo1"></p>
+
+<script>
+    var points1 = new Array(40);
+    document.getElementById("demo1").innerHTML = points1[0];
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<h4>A common question is: How do I know if a variable is an array?<br> The problem is that the JavaScript operator typeof returns "object":<br><br> const fruits = ["Banana", "Orange", "Apple"];<br> let type = typeof fruits;</h4>
+<p id="demo"></p>
+
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = typeof fruits;
+</script>
+<p>The typeof operator returns object because a JavaScript array is an object.</p>
+<h3>Solution 1:</h3>
+<h4>To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray():<br><br> Array.isArray(fruits);
+
+</h4>
+<p id="demo1"></p>
+
+<script>
+    const fruits1 = ["Banana", "Orange", "Apple"];
+    document.getElementById("demo1").innerHTML = Array.isArray(fruits1);
+</script>
+<h3>Solution 2:</h3>
+<h4>The instanceof operator returns true if an object is created by a given constructor:<br><br> const fruits = ["Banana", "Orange", "Apple"];<br> fruits instanceof Array;</h4>
+<p id="demo2"></p>
+
+<script>
+    var fruits2 = ["Banana", "Orange", "Apple"];
+    document.getElementById("demo2").innerHTML = fruits2 instanceof Array;
+</script>
+
+</html>

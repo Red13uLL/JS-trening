@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h3>The real strength of JavaScript arrays are the built-in array properties and methods:<br><br> cars.length // Returns the number of elements<br> cars.sort() // Sorts the array</h3>
+    <h1>The length Property</h1>
+    <h4>The length property of an array returns the length of an array (the number of array elements).</h4>
+    <h4>Example:<br> const fruits = ["Banana", "Orange", "Apple", "Mango"];<br> let length = fruits.length;</h4>
+    <p id="demo"></p>
+    <script>
+        const fruits = ["Bannana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.length;
+    </script>
+    <p>The length property is always one more than the highest array index.</p><br><br>
+    <h1>Accessing the First Array Element</h1>
+    <p>JavaScript array elements are accesses using numeric indexes (starting from 0).</p>
+
+    <h4>Example:<br> const fruits = ["Banana", "Orange", "Apple", "Mango"];<br> let fruit = fruits[0];</h4>
+    <p id="demo1"></p>
+    <script>
+        const fruits1 = ["Bannana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits1[0];
+    </script><br><br>
+    <h1>Accessing the Last Array Element</h1>
+    <h4>Example:<br> const fruits = ["Banana", "Orange", "Apple", "Mango"];<br> let fruit = fruits[fruits.length - 1];</h4>
+    <p id="demo2"></p>
+    <script>
+        var fruits2 = ["Bannana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo2").innerHTML = fruits2[fruits.length - 1];
+    </script><br><br>
+    <h1>Looping Array Elements</h1>
+    <P>One way to loop through an array, is using a <span style="color: red;">for</span> loop:</P>
+    <h4>Example:<br> const fruits = ["Banana", "Orange", "Apple", "Mango"];<br> let fLen = fruits.length;<br>
+        <br> text = "
+        < ul>"; <br> for (let i = 0; i
+            < fLen; i++) {<br>
+                text += "
+                <li>" + fruits[i] + "</li>";<br> }
+                <br> text += "</ul>";</h4>
+    <p id="demo3"></p>
+    <script>
+        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("demo3").innerHTML = text;
+    </script>
+    <p>You can also use the <span style="color: red;">Array.forEach()</span> function:</p>
+    <h4>Example:<br> const fruits = ["Banana", "Orange", "Apple", "Mango"];<br> let text = "
+        < ul>";<br> fruits.forEach(myFunction);
+            <br> text += "</ ul>";<br>
+        <br> function myFunction(value) {<br> text += "
+        < li>" + value + "</ li>";<br> }
+    </h4>
+    <p>Array.forEach() calls a function for each array element.</p>
+    <p id="demo4"></p>
+    <script>
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        let text2 = "<ul>";
+        fruits4.forEach(myFunction);
+        text2 += "</ul>";
+        document.getElementById("demo4").innerHTML = text2;
+
+        function myFunction(value) {
+            text2 += "<li>" + value + "</li>";
+        }
+    </script>
+</body>
+
+</html>

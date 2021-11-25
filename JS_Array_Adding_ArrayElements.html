@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<h1>Adding Array Elements</h1>
+<p>The easiest way to add a new element to an array is using the PUSH() method:</p>
+<h4>Example:<br> const fruits = ["Banana" , "Orange", "Apple"];<br> fruits.push("Lemon");
+</h4>
+<p>The push method appends a new element to an array.</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+<script>
+    const fruits = ["Banana", "Orange", "Apple"];
+    document.getElementById("demo").innerHTML = fruits;
+
+    function myFunction() {
+        fruits.push("Lemon");
+        document.getElementById("demo").innerHTML = fruits;
+    }
+</script>
+<p>New element can also be added to an array using the LENGTH property</p>
+<h4>Example:<br> const fruits = ["Banana", "Orange", "Apple"];<br> fruits[fruits.length] = "Lemon";</h4>
+<p>The length property provides an easy way to append new elements to an array without using the push() method</p>
+<button onclick="myFunction1()">Try it</button>
+
+<p id="demo1"></p>
+
+<script>
+    const fruits1 = ["Banana", "Orange", "Apple"];
+    document.getElementById("demo1").innerHTML = fruits1;
+
+    function myFunction1() {
+        fruits1[fruits1.length] = "Lemon";
+        document.getElementById("demo1").innerHTML = fruits1;
+    }
+</script>
+<h2>WARNING ! Adding elements with high indexes can create undefined "holes" in an array:</h2>
+<h4>Example:<br> const fruits = ["Banana", "Orange", "Apple"];<br>fruits[6] = "Lemon";</h4>
+<p id="demo2"></p>
+<script>
+    const fruits2 = ["Banana", "Orange", "Apple"];
+    fruits2[6] = "Lemon";
+    let flen = fruits2.length;
+    let text = "";
+    for (i = 0; i < flen; i++) {
+        text += fruits2[i] + "<br>";
+    }
+
+    document.getElementById("demo2").innerHTML = text;
+</script>
+
+</html>

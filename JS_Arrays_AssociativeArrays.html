@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<h1>Associative Arrays</h1>
+<p>Many programming languages support arrays with named indexes.<br> Arrays with named indexes are called associative arrays (or hashes).<br> JavaScript does not support arrays with named indexes.<br> In JavaScript, arrays always use numbered indexes. </p>
+<h4>Example:<br>const person = [];<br> person[0] = "John";<br> person[1] = "Doe";<br> person[2] = 46;<br> person.length;
+    <br> person[0];
+</h4>
+<p id="demo"></p>
+<script>
+    const person = [];
+    person[0] = "John";
+    person[1] = "Doe";
+    person[2] = 46;
+    document.getElementById("demo").innerHTML = person[0] + " " + person.length;
+</script>
+<h3>WARNING !!<br> If you use named indexes, JavaScript will redefine the array to an object.<br> After that, some array methods and properties will produce incorrect results.</h3>
+<h4>Example:<br>const person = []; person["firstName"] = "John";<br> person["lastName"] = "Doe";<br> person["age"] = 46;<br> person.length; <br> person[0]; </h4>
+<p id="demo1"></p>
+
+<script>
+    const person1 = [];
+    person1["firstName"] = "John";
+    person1["lastName"] = "Doe";
+    person1["age"] = 46;
+    document.getElementById("demo1").innerHTML =
+        person1[0] + " " + person1.length;
+</script>
+
+</html>

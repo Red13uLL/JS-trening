@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<h1>The Difference Between Arrays and Objects</h1>
+<h3>In JavaScript, arrays use numbered indexes. <br> In JavaScript, objects use named indexes.</h3>
+<p>Arrays are a special kind of objects, with numbered indexes.</p>
+<h2>When to Use Arrays. When to use Objects.</h2>
+<ul>When to Use Arrays. When to use Objects.
+    <li>JavaScript does not support associative arrays.</li>
+    <li>You should use objects when you want the element names to be strings (text).</li>
+    <li>You should use arrays when you want the element names to be numbers.</li>
+</ul>
+<h2>JavaScript new Array()</h2>
+<h4>JavaScript has a built in array constructor new Array().<br> But you can safely use [] instead.<br><br> These two different statements both create a new empty array named points:<br><br> const points = new Array();<br> const points = [];<br><br> These
+    two different statements both create a new array containing 6 numbers:<br><br> const points = new Array(40, 100, 1, 5, 25, 10);<br> const points = [40, 100, 1, 5, 25, 10];</h4>
+<P>Avoid using new Array(). Use [] instead.</P>
+<p id="demo"></p>
+<script>
+    const points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = points[0];
+</script>
+<h4>The new keyword can produce some unexpected results:</h4>
+<p>Create an Array with three elements.</p>
+<p id="demo1"></p>
+<script>
+    var points1 = new Array(40, 100, 1);
+    document.getElementById("demo1").innerHTML = points1;
+</script>
+<p>Create an Array with two elements.</p>
+<p id="demo2"></p>
+<script>
+    var points2 = new Array(40, 100);
+    document.getElementById("demo2").innerHTML = points2;
+</script>
+<p>Create an array with one element ???</p>
+<p>Avoid using new Array().</p>
+<p id="demo3"></p>
+<script>
+    var points3 = new Array(40);
+    document.getElementById("demo3").innerHTML = points3;
+</script>
+
+</html>
