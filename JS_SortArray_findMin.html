@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Array Sort</h2>
+    <p>The lowest number is <span id="demo"></span>.</p>
+
+    <script>
+        const points = [40, 100, 2, 0.5, 7, 54, 378];
+        document.getElementById("demo").innerHTML = myArrayMin(points);
+
+        function myArrayMin(arr) {
+            let len = arr.length;
+            let min = Infinity;
+            while (len--) {
+                if (arr[len] < min) {
+                    min = arr[len];
+                }
+
+            }
+            return min;
+        }
+    </script>
+    <p>function myArrayMin(arr) {<br> let len = arr.length;<br> let min = Infinity;<br> while (len--) {<br> if (arr[len]
+        < min) {<br>
+            min = arr[len];<br> }
+            <br>
+            <br> }
+            <br> return min;<br> }
+    </p>
+    <h3>
+        The function definition can use any parameter name it likes.<br> They decided to use arr because this describes the parameter type but they could equally validly have called it ‘astronaut’ or ‘pig’ or<br> anything else that comes to mind.<br>        (Ideally something that makes sense though) As for let min = infinity, that’s just the developer’s way of saying,<br> I’m about to try to find the min value of this array. Assume that the min value is infinity so that any value<br> smaller than
+        that will count as the new ‘min’<br> Then they loop through the array to find a number smaller. Let’s say they find 50 first, <br>so then min becomes 50 (because that is the smallest one they found so far)<br> Then they loop again and maybe they
+        find 0.5 next, so then that becomes the new min.<br> Then later they find 5, 3, 20, 8 and none of those are smaller than 0.5 so they don’t become the min.<br><br><br> etc. hope this helps<br><br> edit: and to be clear, the points array is definitely
+        being passed into the function in this line<br> document.getElementById(“demo”).innerHTML = myArrayMax(points);<br>
+    </h3>
+
+</body>
+
+</html>
