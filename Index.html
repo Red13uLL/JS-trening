@@ -522,6 +522,25 @@
         <a href="" target="_blank">JS_Array_Const_</a><br>
         <a href="" target="_blank">JS_Array_Const_</a><br>
 
+        <p>Redeclaring Arrays Redeclaring an array declared with var is allowed anywhere in a program:<br><br> Example
+
+            <br> var cars = ["Volvo", "BMW"]; // Allowed<br> var cars = ["Toyota", "BMW"]; // Allowed<br> cars = ["Volvo", "Saab"]; // Allowed<br> Redeclaring or reassigning an array to const, in the same scope, or in the same block, is not allowed:<br><br>            Example
+
+            <br> var cars = ["Volvo", "BMW"]; // Allowed<br> const cars = ["Volvo", "BMW"]; // Not allowed<br> {
+            <br> var cars = ["Volvo", "BMW"]; // Allowed<br> const cars = ["Volvo", "BMW"]; // Not allowed<br> }
+            <br> Redeclaring or reassigning an existing const array, in the same scope, or in the same block, is not allowed:<br><br> Example
+
+            <br> const cars = ["Volvo", "BMW"]; // Allowed<br> const cars = ["Volvo", "BMW"]; // Not allowed<br> var cars = ["Volvo", "BMW"]; // Not allowed<br> cars = ["Volvo", "BMW"]; // Not allowed<br><br> {
+
+            <br> const cars = ["Volvo", "BMW"]; // Allowed<br> const cars = ["Volvo", "BMW"]; // Not allowed<br> var cars = ["Volvo", "BMW"]; // Not allowed<br> cars = ["Volvo", "BMW"]; // Not allowed<br> }
+            <br> Redeclaring an array with const, in another scope, or in another block, is allowed:<br><br> Example
+
+            <br> const cars = ["Volvo", "BMW"]; // Allowed<br> {
+            <br> const cars = ["Volvo", "BMW"]; // Allowed<br> }
+            <br> {
+            <br> const cars = ["Volvo", "BMW"]; // Allowed<br> }
+        </p>
+
 
         <h2 class="naslovi">Array Const</h2>
 
