@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Hoisting</h2>
+
+    <p>JavaScript const variables must be assigned a value when they are declared:<br> Meaning: An arrays declared with const must be initialized when it is declared.<br> Using const without initializing the array is a syntax error:<br> Example
+        <br> This will not work:<br> const cars;<br> cars = ["Saab", "Volvo", "BMW"];<br> Arrays declared with var can be initialized at any time.<br> You can even use the array before it is declared:<br> Example
+
+
+        <br> This is OK:<br> cars = ["Saab", "Volvo", "BMW"];<br> var cars;</p>
+    <p id="demo"></p>
+
+    <script>
+        cars = ["Saab", "Volvo", "BMW"];
+        var cars;
+
+        document.getElementById("demo").innerHTML = cars;
+    </script>
+</body>
+
+</html>
