@@ -1438,8 +1438,245 @@ switch (new Date().getDay()) {
   let x = + y;      // x is a number</pre>
 
 
+                <a href="" target="_blank">JS_typeConversion_</a><br>
+
+                <pre>If the variable cannot be converted, it will still become a number, but with the value NaN (Not a Number):
+
+    Example
+    let y = "John";   // y is a string
+    let x = + y;      // x is a number (NaN)</pre>
+                <a href="" target="_blank">JS_typeConversion_</a><br>
+                <pre>Converting Numbers to Strings
+                  The global method String() can convert numbers to strings.
+
+                  It can be used on any type of numbers, literals, variables, or expressions:
+
+                  Example
+                  String(x)         // returns a string from a number variable x
+                  String(123)       // returns a string from a number literal 123
+                  String(100 + 23)  // returns a string from a number from an expression</pre>
+                <a href="" target="_blank">JS_typeConversion_</a><br>
+                <pre>The Number method toString() does the same.
+
+                  Example
+                  x.toString()
+                  (123).toString()
+                  (100 + 23).toString()</pre>
+                <a href="" target="_blank">JS_typeConversion_</a><br>
+                <pre>More Methods
+                  In the chapter Number Methods, you will find more methods that can be used to convert numbers to strings:
+
+                  Method	Description
+                  toExponential()	Returns a string, with a number rounded and written using exponential notation.
+                  toFixed()	Returns a string, with a number rounded and written with a specified number of decimals.
+                  toPrecision()	Returns a string, with a number written with a specified length
+                  Converting Dates to Numbers
+                  The global method Number() can be used to convert dates to numbers.
+
+                  d = new Date();
+                  Number(d)          // returns 1404568027739
+                  The date method getTime() does the same.
+
+                  d = new Date();
+                  d.getTime()        // returns 1404568027739
+                  Converting Dates to Strings
+                  The global method String() can convert dates to strings.
+
+                  String(Date())  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+                  The Date method toString() does the same.
+
+                  Example
+                  Date().toString()  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+                  In the chapter Date Methods, you will find more methods that can be used to convert dates to strings:
+
+                  Method	Description
+                  getDate()	Get the day as a number (1-31)
+                  getDay()	Get the weekday a number (0-6)
+                  getFullYear()	Get the four digit year (yyyy)
+                  getHours()	Get the hour (0-23)
+                  getMilliseconds()	Get the milliseconds (0-999)
+                  getMinutes()	Get the minutes (0-59)
+                  getMonth()	Get the month (0-11)
+                  getSeconds()	Get the seconds (0-59)
+                  getTime()	Get the time (milliseconds since January 1, 1970)
+                  Converting Booleans to Numbers
+                  The global method Number() can also convert booleans to numbers.
+
+                  Number(false)     // returns 0
+                  Number(true)      // returns 1
+                  Converting Booleans to Strings
+                  The global method String() can convert booleans to strings.
+
+                  String(false)      // returns "false"
+                  String(true)       // returns "true"
+                  The Boolean method toString() does the same.
+
+                  false.toString()   // returns "false"
+                  true.toString()    // returns "true"
+                  Automatic Type Conversion
+                  When JavaScript tries to operate on a "wrong" data type, it will try to convert the value to a "right" type.
+
+                  The result is not always what you expect:
+
+                  5 + null    // returns 5         because null is converted to 0
+                  "5" + null  // returns "5null"   because null is converted to "null"
+                  "5" + 2     // returns "52"      because 2 is converted to "2"
+                  "5" - 2     // returns 3         because "5" is converted to 5
+                  "5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2</pre>
+                <a href="" target="_blank">JS_typeConversion_</a><br>
+                <pre>Automatic String Conversion
+                  JavaScript automatically calls the variable's toString() function when you try to "output" an object or a variable:
+
+                  document.getElementById("demo").innerHTML = myVar;
+
+                  // if myVar = {name:"Fjohn"}  // toString converts to "[object Object]"
+                  // if myVar = [1,2,3,4]       // toString converts to "1,2,3,4"
+                  // if myVar = new Date()      // toString converts to "Fri Jul 18 2014 09:08:55 GMT+0200"
+                  Numbers and booleans are also converted, but this is not very visible:
+
+                  // if myVar = 123             // toString converts to "123"
+                  // if myVar = true            // toString converts to "true"
+                  // if myVar = false           // toString converts to "false"
+                  JavaScript Type Conversion Table
+                  This table shows the result of converting different JavaScript values to Number, String, and Boolean:
+
+                  Original
+                  Value	Converted
+                  to Number	Converted
+                  to String	Converted
+                  to Boolean	Try it
+                  false	0	"false"	false
+                  true	1	"true"	true
+                  0	0	"0"	false
+                  1	1	"1"	true
+                  "0"	0	"0"	true
+                  "000"	0	"000"	true
+                  "1"	1	"1"	true
+                  NaN	NaN	"NaN"	false
+                  Infinity	Infinity	"Infinity"	true
+                  -Infinity	-Infinity	"-Infinity"	true
+                  ""	0	""	false
+                  "20"	20	"20"	true
+                  "twenty"	NaN	"twenty"	true
+                  [ ]	0	""	true
+                  [20]	20	"20"	true
+                  [10,20]	NaN	"10,20"	true
+                  ["twenty"]	NaN	"twenty"	true
+                  ["ten","twenty"]	NaN	"ten,twenty"	true
+                  function(){}	NaN	"function(){}"	true
+                  { }	NaN	"[object Object]"	true
+                  null	0	"null"	false
+                  undefined	NaN	"undefined"	false
+                  Values in quotes indicate string values.</pre>
+
+
+                <h2 class="naslovi">JavaScript Bitwise Operations</h2>
+
+
+                <pre>JavaScript Bitwise Operators
+                  Operator	Name	Description
+                  &	AND	Sets each bit to 1 if both bits are 1
+                  |	OR	Sets each bit to 1 if one of two bits is 1
+                  ^	XOR	Sets each bit to 1 if only one of two bits is 1
+                  ~	NOT	Inverts all the bits
+                  <<	Zero fill left shift	Shifts left by pushing zeros in from the right and let the leftmost bits fall off
+                  >>	Signed right shift	Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+                  >>>	Zero fill right shift	Shifts right by pushing zeros in from the left, and let the rightmost bits fall off
+                  Examples
+                  Operation	Result	Same as	Result
+                  5 & 1	1	0101 & 0001	 0001
+                  5 | 1	5	0101 | 0001	 0101
+                  ~ 5	10	 ~0101	 1010
+                  5 << 1	10	0101 << 1	 1010
+                  5 ^ 1	4	0101 ^ 0001	 0100
+                  5 >> 1	2	0101 >> 1	 0010
+                  5 >>> 1	2	0101 >>> 1	 0010
+                  JavaScript Uses 32 bits Bitwise Operands
+                  JavaScript stores numbers as 64 bits floating point numbers, but all bitwise operations are performed on 32 bits binary numbers.
+
+                  Before a bitwise operation is performed, JavaScript converts numbers to 32 bits signed integers.
+
+                  After the bitwise operation is performed, the result is converted back to 64 bits JavaScript numbers.
+
+                  The examples above uses 4 bits unsigned binary numbers. Because of this ~ 5 returns 10.
+
+                  Since JavaScript uses 32 bits signed integers, it will not return 10. It will return -6.
+
+                  00000000000000000000000000000101 (5)
+
+                  11111111111111111111111111111010 (~5 = -6)
+
+                  A signed integer uses the leftmost bit as the minus sign.
+
+                  Bitwise AND
+                  When a bitwise AND is performed on a pair of bits, it returns 1 if both bits are 1.
+
+                  One bit example:
+                  Operation	Result
+                  0 & 0	0
+                  0 & 1	0
+                  1 & 0	0
+                  1 & 1	1
+                  4 bits example:
+                  Operation	Result
+                  1111 & 0000	0000
+                  1111 & 0001	0001
+                  1111 & 0010	0010
+                  1111 & 0100	0100
+                  Bitwise OR
+                  When a bitwise OR is performed on a pair of bits, it returns 1 if one of the bits are 1:
+
+                  One bit example:
+                  Operation	Result
+                  0 | 0	0
+                  0 | 1	1
+                  1 | 0	1
+                  1 | 1	1
+                  4 bits example:
+                  Operation	Result
+                  1111 | 0000	1111
+                  1111 | 0001	1111
+                  1111 | 0010	1111
+                  1111 | 0100	1111
+                  Bitwise XOR
+                  When a bitwise XOR is performed on a pair of bits, it returns 1 if the bits are different:
+
+                  One bit example:
+                  Operation	Result
+                  0 ^ 0	0
+                  0 ^ 1	1
+                  1 ^ 0	1
+                  1 ^ 1	0
+                  4 bits example:
+                  Operation	Result
+                  1111 ^ 0000	1111
+                  1111 ^ 0001	1110
+                  1111 ^ 0010	1101
+                  1111 ^ 0100	1011
+                  JavaScript Bitwise AND (&)
+                  Bitwise AND returns 1 only if both bits are 1:
+
+                  Decimal	Binary
+                  5	00000000000000000000000000000101
+                  1	00000000000000000000000000000001
+                  5 & 1	00000000000000000000000000000001 (1)
+                  Example
+                  let x = 5 & 1;</pre>
+
+                <a href="" target="_blank">JS_BitwiseOperators_</a><br>
+                <a href="" target="_blank">JS_BitwiseOperators_</a><br>
+                <a href="" target="_blank">JS_BitwiseOperators_</a><br>
+                <a href="" target="_blank">JS_BitwiseOperators_</a><br>
+                <a href="" target="_blank">JS_BitwiseOperators_</a><br>
+                <a href="" target="_blank">JS_BitwiseOperators_</a><br>
+                <a href="" target="_blank">JS_BitwiseOperators_</a><br>
+                <a href="" target="_blank">JS_BitwiseOperators_</a><br>
+                <a href="" target="_blank">JS_BitwiseOperators_</a><br>
+
 
     </div>
+
+
 
 </body>
 
