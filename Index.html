@@ -1284,24 +1284,118 @@ switch (new Date().getDay()) {
 
                   null
                   undetypeofd</pre>
+                <pre>The typeof Operator
+  You can use the typeof operator to find the data type of a JavaScript variable.
 
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
-                <a href="" target="_blank">JS_typeof_</a><br>
+  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_1" target="_blank">JS_typeof_1</a><br>
 
 
-                <h2 class="naslovi">JavaScript typeof</h2>
+                <pre>Please observe:
+
+                  The data type of NaN is number
+                  The data type of an array is object
+                  The data type of a date is object
+                  The data type of null is object
+                  The data type of an undefined variable is undefined *
+                  The data type of a variable that has not been assigned a value is also undefined *
+                  You cannot use typeof to determine if a JavaScript object is an array (or a date).
+
+                  Primitive Data
+                  A primitive data value is a single simple data value with no additional properties and methods.
+
+                  The typeof operator can return one of these primitive types:
+
+                  string
+                  number
+                  boolean
+                  undefined
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_2" target="_blank">JS_typeof_2</a><br>
+
+                <pre>Complex Data
+                  The typeof operator can return one of two complex types:
+
+                  function
+                  object
+                  The typeof operator returns "object" for objects, arrays, and null.
+
+                  The typeof operator does not return "object" for functions.
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_3" target="_blank">JS_typeof_3</a><br>
+                <pre>The typeof operator returns "object" for arrays because in JavaScript arrays are objects.
+
+                  The Data Type of typeof
+                  The typeofoperator is not a variable. It is an operator. Operators ( + - * / ) do not have any data type.
+
+                  But, the typeof operator always returns a string (containing the type of the operand).
+
+                  The constructor Property
+                  The constructor property returns the constructor function for all JavaScript variables.
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_4" target="_blank">JS_typeof_4</a><br>
+                <pre>You can check the constructor property to find out if an object is an Array (contains the word "Array"):
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_5" target="_blank">JS_typeof_5</a><br>
+                <pre>Or even simpler, you can check if the object is an Array function:
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_6" target="_blank">JS_typeof_6</a><br>
+                <pre>You can check the constructor property to find out if an object is a Date (contains the word "Date"):
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_7" target="_blank">JS_typeof_7</a><br>
+                <pre>Or even simpler, you can check if the object is a Date function:
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_8" target="_blank">JS_typeof_8</a><br>
+                <pre>Undefined
+                  In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_9" target="_blank">JS_typeof_9</a><br>
+                <pre>Any variable can be emptied, by setting the value to undefined. The type will also be undefined.
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_10" target="_blank">JS_typeof_10</a><br>
+                <pre>Empty Values
+                  An empty value has nothing to do with undefined.
+
+                  An empty string has both a legal value and a type.
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_11" target="_blank">JS_typeof_11</a><br>
+                <pre>Null
+                  In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
+
+                  Unfortunately, in JavaScript, the data type of null is an object.
+
+                  You can consider it a bug in JavaScript that typeof null is an object. It should be null.
+
+                  You can empty an object by setting it to null:
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_12" target="_blank">JS_typeof_12</a><br>
+                <pre>You can also empty an object by setting it to undefined:
+
+                  Example</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_13" target="_blank">JS_typeof_13</a><br>
+                <pre>Difference Between Undefined and Null
+                  undefined and null are equal in value but different in type:
+
+                  typeof undefined           // undefined
+                  typeof null                // object
+
+                  null === undefined         // false
+                  null == undefined          // true
+                  </pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_typeof_14" target="_blank">JS_typeof_14</a><br>
+
+
+                <h2 class="naslovi">JavaScript Type Conversion</h2>
 
 
 
