@@ -2132,14 +2132,14 @@ switch (new Date().getDay()) {
                     "use strict";
                     x = 3.14;       // This will cause an error because x is not declared
                     </pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_1" target="_blank">JS_useStrict_1</a><br>
                 <pre>"use strict";
                   myFunction();
 
                   function myFunction() {
                     y = 3.14;   // This will also cause an error because y is not declared
                   }</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_2" target="_blank">JS_useStrict_</a><br>
                 <pre>Declared inside a function, it has local scope (only the code inside the function is in strict mode):
 
                   x = 3.14;       // This will not cause an error.
@@ -2149,7 +2149,7 @@ switch (new Date().getDay()) {
                     "use strict";
                     y = 3.14;   // This will cause an error
                   }</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_3" target="_blank">JS_useStrict_</a><br>
                 <pre>The "use strict"; Syntax
                   The syntax, for declaring strict mode, was designed to be compatible with older versions of JavaScript.
 
@@ -2173,14 +2173,14 @@ switch (new Date().getDay()) {
 
                   "use strict";
                   x = 3.14;                // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_4" target="_blank">JS_useStrict_</a><br>
                 <pre>Objects are variables too.
 
                   Using an object, without declaring it, is not allowed:
 
                   "use strict";
                   x = {p1:10, p2:20};      // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_5" target="_blank">JS_useStrict_</a><br>
                 <pre>Deleting a variable (or object) is not allowed.
 
                   "use strict";
@@ -2188,28 +2188,28 @@ switch (new Date().getDay()) {
                   delete x;                // This will cause an error
 
                   </pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_6" target="_blank">JS_useStrict_</a><br>
                 <pre>Deleting a function is not allowed.
 
                   "use strict";
                   function x(p1, p2) {};
                   delete x;                // This will cause an error </pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_7" target="_blank">JS_useStrict_</a><br>
                 <pre>Duplicating a parameter name is not allowed:
 
                   "use strict";
                   function x(p1, p1) {};   // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_8" target="_blank">JS_useStrict_</a><br>
                 <pre>Octal numeric literals are not allowed:
 
                   "use strict";
                   let x = 010;             // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_9" target="_blank">JS_useStrict_</a><br>
                 <pre>Octal escape characters are not allowed:
 
                   "use strict";
                   let x = "\010";            // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_10" target="_blank">JS_useStrict_</a><br>
                 <pre>Writing to a read-only property is not allowed:
 
                   "use strict";
@@ -2217,40 +2217,40 @@ switch (new Date().getDay()) {
                   Object.defineProperty(obj, "x", {value:0, writable:false});
 
                   obj.x = 3.14;            // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_11" target="_blank">JS_useStrict_</a><br>
                 <pre>Writing to a get-only property is not allowed:
 
                   "use strict";
                   const obj = {get x() {return 0} };
 
                   obj.x = 3.14;            // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_12" target="_blank">JS_useStrict_</a><br>
                 <pre>Deleting an undeletable property is not allowed:
 
                   "use strict";
                   delete Object.prototype; // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_13" target="_blank">JS_useStrict_</a><br>
                 <pre>The word eval cannot be used as a variable:
 
                   "use strict";
                   let eval = 3.14;         // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_14" target="_blank">JS_useStrict_</a><br>
                 <pre>The word arguments cannot be used as a variable:
 
                   "use strict";
                   let arguments = 3.14;    // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_15" target="_blank">JS_useStrict_</a><br>
                 <pre>The with statement is not allowed:
 
                   "use strict";
                   with (Math){x = cos(2)}; // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_16" target="_blank">JS_useStrict_</a><br>
                 <pre>For security reasons, eval() is not allowed to create variables in the scope from which it was called:
 
                   "use strict";
                   eval ("let x = 2");
                   alert (x);             // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_17" target="_blank">JS_useStrict_</a><br>
                 <pre>The this keyword in functions behaves differently in strict mode.
 
                   The this keyword refers to the object that called the function.
@@ -2264,7 +2264,7 @@ switch (new Date().getDay()) {
                   myFunction();
 
                   </pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_18" target="_blank">JS_useStrict_</a><br>
                 <pre>Future Proof!
                   Keywords reserved for future JavaScript versions can NOT be used as variable names in strict mode.
 
@@ -2281,11 +2281,34 @@ switch (new Date().getDay()) {
                   yield
                   "use strict";
                   let public = 1500;      // This will cause an error</pre>
-                <a href="" target="_blank">JS_useStrict_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_usestrict_19" target="_blank">JS_useStrict_</a><br>
 
 
 
                 <h2 class="naslovi">JavaScript This Keyword</h2>
+
+
+                <pre>Example
+                  const person = {
+                    firstName: "John",
+                    lastName : "Doe",
+                    id       : 5566,
+                    fullName : function() {
+                      return this.firstName + " " + this.lastName;
+                    }
+                  };</pre>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+                <a href="" target="_blank">JS_thisKeyword_</a><br>
+    </div>
     </div>
 
 
