@@ -2053,19 +2053,85 @@ switch (new Date().getDay()) {
 
                   In other words; a variable can be used before it has been declared.</pre>
 
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_1" target="_blank">JS_Hoisting_</a><br>
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_2" target="_blank">JS_Hoisting_</a><br>
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_3" target="_blank">JS_Hoisting_</a><br>
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_4" target="_blank">JS_Hoisting_</a><br>
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_5" target="_blank">JS_Hoisting_</a><br>
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_6" target="_blank">JS_Hoisting_</a><br>
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_7" target="_blank">JS_Hoisting_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_1" target="_blank">JS_Hoisting_1</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_2" target="_blank">JS_Hoisting_2</a><br>
+
+                <pre>The let and const Keywords
+                  Variables defined with let and const are hoisted to the top of the block, but not initialized.
+
+                  Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+
+                  Using a let variable before it is declared will result in a ReferenceError.
+
+                  The variable is in a "temporal dead zone" from the start of the block until it is declared:
+
+                  Example
+                  This will result in a ReferenceError:
+                  carName = "Volvo";
+                  let carName;</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_3" target="_blank">JS_Hoisting_3</a><br>
+
+                <pre>Using a const variable before it is declared, is a syntax errror, so the code will simply not run.
+
+                  Example
+                  This code will not run.
+
+                  carName = "Volvo";
+                  const carName;</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_4" target="_blank">JS_Hoisting_4</a><br>
+
+                <pre>JavaScript Initializations are Not Hoisted
+                  JavaScript only hoists declarations, not initializations.
+
+                  Example 1 does not give the same result as Example 2:
+
+                  Example 1
+                  var x = 5; // Initialize x
+                  var y = 7; // Initialize y
+
+                  elem = document.getElementById("demo"); // Find an element
+                  elem.innerHTML = x + " " + y;           // Display x and y</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_5" target="_blank">JS_Hoisting_5</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_6" target="_blank">JS_Hoisting_6/a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_hoisting_7" target="_blank">JS_Hoisting_7</a><br>
+
+                <pre>Declare Your Variables At the Top !
+                  Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript.
+
+                  If a developer doesn't understand hoisting, programs may contain bugs (errors).
+
+                  To avoid bugs, always declare all variables at the beginning of every scope.
+
+                  Since this is how JavaScript interprets the code, it is always a good rule.
+
+                  JavaScript in strict mode does not allow variables to be used if they are not declared.
+                  Study "use strict" in the next chapter.</pre>
 
 
 
                 <h2 class="naslovi">JavaScript Use Strict</h2>
 
 
+                <pre>"use strict"; Defines that JavaScript code should be executed in "strict mode".
+
+                  The "use strict" Directive
+                  The "use strict" directive was new in ECMAScript version 5.
+
+                  It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
+
+                  The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+
+                  With strict mode, you can not, for example, use undeclared variables.</pre>
+
+                <pre>Declaring Strict Mode
+                    Strict mode is declared by adding "use strict"; to the beginning of a script or a function.
+
+                    Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode):
+
+                    Example
+                    "use strict";
+                    x = 3.14;       // This will cause an error because x is not declared
+                    </pre>
                 <a href="" target="_blank">JS_useStrict_</a><br>
                 <a href="" target="_blank">JS_useStrict_</a><br>
                 <a href="" target="_blank">JS_useStrict_</a><br>
