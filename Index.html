@@ -2720,7 +2720,7 @@ switch (new Date().getDay()) {
                   Import a default export from the file message.js:
 
                   import message from "./message.js";</pre>
-                <a href="" target="_blank">JS_Modules_2</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_modules2" target="_blank">JS_Modules_2</a><br>
 
                 <pre>Note
                   Modules only work with the HTTP(s) protocol.
@@ -2732,10 +2732,207 @@ switch (new Date().getDay()) {
                 <h2 class="naslovi">JavaScript JSON</h2>
 
 
+                <pre>JSON is a format for storing and transporting data.
+
+                  JSON is often used when data is sent from a server to a web page.
+
+                  What is JSON?
+                  JSON stands for JavaScript Object Notation
+                  JSON is a lightweight data interchange format
+                  JSON is language independent *
+                  JSON is "self-describing" and easy to understand
+                  * The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
+
+                  JSON Example
+                  This JSON syntax defines an employees object: an array of 3 employee records (objects):
+
+                  JSON Example
+                  {
+                  "employees":[
+                    {"firstName":"John", "lastName":"Doe"},
+                    {"firstName":"Anna", "lastName":"Smith"},
+                    {"firstName":"Peter", "lastName":"Jones"}
+                  ]
+                  }
+                  The JSON Format Evaluates to JavaScript Objects
+                  The JSON format is syntactically identical to the code for creating JavaScript objects.
+
+                  Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.
+
+                  JSON Syntax Rules
+                  Data is in name/value pairs
+                  Data is separated by commas
+                  Curly braces hold objects
+                  Square brackets hold arrays
+                  JSON Data - A Name and a Value
+                  JSON data is written as name/value pairs, just like JavaScript object properties.
+
+                  A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value:
+
+                  "firstName":"John"
+                  JSON names require double quotes. JavaScript names do not.
+
+                  JSON Objects
+                  JSON objects are written inside curly braces.
+
+                  Just like in JavaScript, objects can contain multiple name/value pairs:
+
+                  {"firstName":"John", "lastName":"Doe"}
+                  JSON Arrays
+                  JSON arrays are written inside square brackets.
+
+                  Just like in JavaScript, an array can contain objects:
+
+                  "employees":[
+                    {"firstName":"John", "lastName":"Doe"},
+                    {"firstName":"Anna", "lastName":"Smith"},
+                    {"firstName":"Peter", "lastName":"Jones"}
+                  ]
+                  In the example above, the object "employees" is an array. It contains three objects.
+
+                  Each object is a record of a person (with a first name and a last name).
+
+                  Converting a JSON Text to a JavaScript Object
+                  A common use of JSON is to read data from a web server, and display the data in a web page.
+
+                  For simplicity, this can be demonstrated using a string as input.
+
+                  First, create a JavaScript string containing JSON syntax:
+
+                  let text = '{ "employees" : [' +
+                  '{ "firstName":"John" , "lastName":"Doe" },' +
+                  '{ "firstName":"Anna" , "lastName":"Smith" },' +
+                  '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+                  Then, use the JavaScript built-in function JSON.parse() to convert the string into a JavaScript object:
+
+                  const obj = JSON.parse(text);
+                  Finally, use the new JavaScript object in your page:
+
+                  Example
+                  <p id="demo"></p>
+
+                  <script>
+                  document.getElementById("demo").innerHTML =
+                  obj.employees[1].firstName + " " + obj.employees[1].lastName;
+                  </script></pre>
+
+                <a href="" target="_blank">JS_Json_1</a><br>
+
+
+
+
+
+
+                <h2 class="naslovi">JavaScript Debugging</h2>
+
+
+                <pre>rrors can (will) happen, every time you write some new computer code.
+
+                  Code Debugging
+                  Programming code might contain syntax errors, or logical errors.
+
+                  Many of these errors are difficult to diagnose.
+
+                  Often, when programming code contains errors, nothing will happen. There are no error messages, and you will get no indications where to search for errors.
+
+                  Searching for (and fixing) errors in programming code is called code debugging.
+
+                  JavaScript Debuggers
+                  Debugging is not easy. But fortunately, all modern browsers have a built-in JavaScript debugger.
+
+                  Built-in debuggers can be turned on and off, forcing errors to be reported to the user.
+
+                  With a debugger, you can also set breakpoints (places where code execution can be stopped), and examine variables while the code is executing.
+
+                  Normally, otherwise follow the steps at the bottom of this page, you activate debugging in your browser with the F12 key, and select "Console" in the debugger menu.
+
+                  The console.log() Method
+                  If your browser supports debugging, you can use console.log() to display JavaScript values in the debugger window:
+
+                  Example
+                  <!DOCTYPE html>
+                  <html>
+                  <body>
+
+                  <h1>My First Web Page</h1>
+
+                  <script>
+                  a = 5;
+                  b = 6;
+                  c = a + b;
+                  console.log(c);
+                  </script>
+
+                  </body>
+                  </html></pre>
+
+                <a href="" target="_blank">JS_Json_1</a><br>
+
+                <pre>Tip: Read more about the console.log() method in our JavaScript Console Reference.
+
+                    Setting Breakpoints
+                    In the debugger window, you can set breakpoints in the JavaScript code.
+
+                    At each breakpoint, JavaScript will stop executing, and let you examine JavaScript values.
+
+                    After examining values, you can resume the execution of code (typically with a play button).
+
+                    The debugger Keyword
+                    The debugger keyword stops the execution of JavaScript, and calls (if available) the debugging function.
+
+                    This has the same function as setting a breakpoint in the debugger.
+
+                    If no debugging is available, the debugger statement has no effect.
+
+                    With the debugger turned on, this code will stop executing before it executes the third line.
+
+                    Example
+                    let x = 15 * 5;
+                    debugger;
+                    document.getElementById("demo").innerHTML = x;</pre>
+
+                <a href="" target="_blank">JS_Json_1</a><br>
+
+                <pre>Major Browsers' Debugging Tools
+                  Normally, you activate debugging in your browser with F12, and select "Console" in the debugger menu.
+
+                  Otherwise follow these steps:
+
+                  Chrome
+                  Open the browser.
+                  From the menu, select "More tools".
+                  From tools, choose "Developer tools".
+                  Finally, select Console.
+                  Firefox
+                  Open the browser.
+                  From the menu, select "Web Developer".
+                  Finally, select "Web Console".
+                  Edge
+                  Open the browser.
+                  From the menu, select "Developer Tools".
+                  Finally, select "Console".
+                  Opera
+                  Open the browser.
+                  From the menu, select "Developer".
+                  From "Developer", select "Developer tools".
+                  Finally, select "Console".
+                  Safari
+                  Go to Safari, Preferences, Advanced in the main menu.
+                  Check "Enable Show Develop menu in menu bar".
+                  When the new option "Develop" appears in the menu:
+                  Choose "Show Error Console".
+                  Did You Know?
+                  Debugging is the process of testing, finding, and reducing bugs (errors) in computer programs.
+                  The first known computer bug was a real bug (an insect) stuck in the electronics.</pre>
+
 
 
                 <h2 class="naslovi">JavaScript Classes</h2>
-                <h2 class="naslovi">JavaScript Classes</h2>
+
+
+
+
+
                 <h2 class="naslovi">JavaScript Classes</h2>
                 <h2 class="naslovi">JavaScript Classes</h2>
                 <h2 class="naslovi">JavaScript Classes</h2>
