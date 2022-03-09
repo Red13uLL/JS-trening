@@ -2582,7 +2582,7 @@ switch (new Date().getDay()) {
                   let myCar1 = new Car("Ford", 2014);
                   let myCar2 = new Car("Audi", 2019);</pre>
 
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_arrowfunction_8" target="_blank">JS_ArrowFunction_8</a><br>
+                <a href="" target="_blank">JS_Classes_</a><br>
 
                 <pre>The example above uses the Car class to create two Car objects.
 
@@ -2629,7 +2629,7 @@ switch (new Date().getDay()) {
                   let myCar = new Car("Ford", 2014);
                   document.getElementById("demo").innerHTML =
                   "My car is " + myCar.age() + " years old.";</pre>
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_arrowfunction_8" target="_blank">JS_ArrowFunction_8</a><br>
+                <a href="" target="_blank">JS_Classes_</a><br>
 
                 <pre>You can send parameters to Class methods:
 
@@ -2652,7 +2652,7 @@ switch (new Date().getDay()) {
                   "My car is " + myCar.age(year) + " years old.";
 
                   </pre>
-                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_arrowfunction_8" target="_blank">JS_ArrowFunction_8</a><br>
+                <a href="" target="_blank">JS_Classes_</a><br>
 
 
 
@@ -2661,11 +2661,79 @@ switch (new Date().getDay()) {
 
 
 
+                <pre>Modules
+                  JavaScript modules allow you to break up your code into separate files.
+
+                  This makes it easier to maintain the code-base.
+
+                  JavaScript modules rely on the import and export statements.
+
+                  Export
+                  You can export a function or variable from any file.
+
+                  Let us create a file named person.js, and fill it with the things we want to export.
+
+                  There are two types of exports: Named and Default.
+
+                  Named Exports
+                  You can create named exports two ways. In-line individually, or all at once at the bottom.
+
+                  In-line individually:
+                  person.js
+
+                  export const name = "Jesse";
+                  export const age = 40;
+                  All at once at the bottom:
+                  person.js
+
+                  const name = "Jesse";
+                  const age = 40;
+
+                  export {name, age};
+                  Default Exports
+                  Let us create another file, named message.js, and use it for demonstrating default export.
+
+                  You can only have one default export in a file.
+
+                  Example
+                  message.js
+
+                  const message = () => {
+                  const name = "Jesse";
+                  const age = 40;
+                  return name + ' is ' + age + 'years old.';
+                  };
+
+                  export default message;
+                  Import
+                  You can import modules into a file in two ways, based on if they are named exports or default exports.
+
+                  Named exports are constructed using curly braces. Default exports are not.
+
+                  Import from named exports
+                  Import named exports from the file person.js:
+
+                  import { name, age } from "./person.js";</pre>
+                <a href="" target="_blank">JS_Classes_</a><br>
+
+                <pre>Import from default exports
+                  Import a default export from the file message.js:
+
+                  import message from "./message.js";</pre>
+                <a href="" target="_blank">JS_Classes_</a><br>
+
+                <pre>Note
+                  Modules only work with the HTTP(s) protocol.
+
+                  A web-page opened via the file:// protocol cannot use import / export.</pre>
+
+
+
+                <h2 class="naslovi">JavaScript JSON</h2>
 
 
 
 
-                <h2 class="naslovi">JavaScript Classes</h2>
                 <h2 class="naslovi">JavaScript Classes</h2>
                 <h2 class="naslovi">JavaScript Classes</h2>
                 <h2 class="naslovi">JavaScript Classes</h2>
