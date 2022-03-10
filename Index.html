@@ -3202,18 +3202,153 @@ switch (new Date().getDay()) {
                   const x6 = /()/;         // new regexp object
                   const x7 = function(){}; // new function object</pre>
 
-                <a href="" target="_blank">JS_BestPracties_</a><br>
-                <a href="" target="_blank">JS_BestPracties_</a><br>
-                <a href="" target="_blank">JS_BestPracties_</a><br>
-                <a href="" target="_blank">JS_BestPracties_</a><br>
-                <a href="" target="_blank">JS_BestPracties_</a><br>
-                <a href="" target="_blank">JS_BestPracties_</a><br>
-                <a href="" target="_blank">JS_BestPracties_</a><br>
-                <a href="" target="_blank">JS_BestPracties_</a><br>
-                <a href="" target="_blank">JS_BestPracties_</a><br>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_bestpracties_1" target="_blank">JS_BestPracties_1</a><br>
+                <pre>Beware of Automatic Type Conversions
+                  JavaScript is loosely typed.
+
+                  A variable can contain all data types.
+
+                  A variable can change its data type:
+
+                  Example
+                  let x = "Hello";     // typeof x is a string
+                  x = 5;               // changes typeof x to a number</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_bestpracties_2" target="_blank">JS_BestPracties_2</a><br>
+                <pre>Beware that numbers can accidentally be converted to strings or NaN (Not a Number).
+
+                  When doing mathematical operations, JavaScript can convert numbers to strings:
+
+                  Example
+                  let x = 5 + 7;       // x.valueOf() is 12,  typeof x is a number
+                  let x = 5 + "7";     // x.valueOf() is 57,  typeof x is a string
+                  let x = "5" + 7;     // x.valueOf() is 57,  typeof x is a string
+                  let x = 5 - 7;       // x.valueOf() is -2,  typeof x is a number
+                  let x = 5 - "7";     // x.valueOf() is -2,  typeof x is a number
+                  let x = "5" - 7;     // x.valueOf() is -2,  typeof x is a number
+                  let x = 5 - "x";     // x.valueOf() is NaN, typeof x is a number</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_bestpracties_3" target="_blank">JS_BestPracties_3</a><br>
+                <pre>Subtracting a string from a string, does not generate an error but returns NaN (Not a Number):
+
+                  Example
+                  "Hello" - "Dolly"    // returns NaN</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_bestpracties_4" target="_blank">JS_BestPracties_4</a><br>
+                <pre>Use === Comparison
+                  The == comparison operator always converts (to matching types) before comparison.
+
+                  The === operator forces comparison of values and type:
+
+                  Example
+                  0 == "";        // true
+                  1 == "1";       // true
+                  1 == true;      // true
+
+                  0 === "";       // false
+                  1 === "1";      // false
+                  1 === true;     // false</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_bestpracties_5" target="_blank">JS_BestPracties_5</a><br>
+                <pre>Use Parameter Defaults
+                  If a function is called with a missing argument, the value of the missing argument is set to undefined.
+
+                  Undefined values can break your code. It is a good habit to assign default values to arguments.
+
+                  Example
+                  function myFunction(x, y) {
+                    if (y === undefined) {
+                      y = 0;
+                    }
+                  }</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_bestpracties_6" target="_blank">JS_BestPracties_6</a><br>
+                <pre>End Your Switches with Defaults
+                  Always end your switch statements with a default. Even if you think there is no need for it.
+
+                  Example
+                  switch (new Date().getDay()) {
+                    case 0:
+                      day = "Sunday";
+                      break;
+                    case 1:
+                      day = "Monday";
+                      break;
+                    case 2:
+                      day = "Tuesday";
+                      break;
+                    case 3:
+                      day = "Wednesday";
+                      break;
+                    case 4:
+                      day = "Thursday";
+                      break;
+                    case 5:
+                      day = "Friday";
+                      break;
+                    case 6:
+                      day = "Saturday";
+                      break;
+                    default:
+                      day = "Unknown";
+                  }</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_bestpracties_7" target="_blank">JS_BestPracties_7</a><br>
+                <pre>Avoid Number, String, and Boolean as Objects
+                  Always treat numbers, strings, or booleans as primitive values. Not as objects.
+
+                  Declaring these types as objects, slows down execution speed, and produces nasty side effects:
+
+                  Example
+                  let x = "John";
+                  let y = new String("John");
+                  (x === y) // is false because x is a string and y is an object.</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_bestpracties_8" target="_blank">JS_BestPracties_8</a><br>
+                <pre>Or even worse:
+
+                  Example
+                  let x = new String("John");
+                  let y = new String("John");
+                  (x == y) // is false because you cannot compare objects.</pre>
+                <a href="https://mystifying-allen-5cb3ba.netlify.app/js_bestpracties_9" target="_blank">JS_BestPracties_9</a><br>
+                <pre>Avoid Using eval()
+                  The eval() function is used to run text as code. In almost all cases, it should not be necessary to use it.
+
+                  Because it allows arbitrary code to be run, it also represents a security problem.</pre>
 
 
-                <h2 class="naslovi">JavaScript Classes</h2>
+
+                <h2 class="naslovi">JavaScript Common Mistakes</h2>
+
+
+                <pre>Accidentally Using the Assignment Operator
+                  JavaScript programs may generate unexpected results if a programmer accidentally uses an assignment operator (=), instead of a comparison operator (==) in an if statement.
+
+                  This if statement returns false (as expected) because x is not equal to 10:
+
+                  let x = 0;
+                  if (x == 10)</pre>
+
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+                <a href="" target="_blank">JS_CommonMistakes_</a><br>
+
+
                 <h2 class="naslovi">JavaScript Classes</h2>
                 <h2 class="naslovi">JavaScript Classes</h2>
 
