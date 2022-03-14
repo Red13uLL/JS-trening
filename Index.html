@@ -3809,16 +3809,405 @@ switch (new Date().getDay()) {
 
                 <h2 class="naslovi">JavaScript 2018</h2>
 
+                <pre>The JavaScript naming convention started with ES1, ES2, ES3, ES5 and ES6.
+
+                  But, ECMAScript 2016 and 2017 was not called ES7 and ES8.
+
+                  Since 2016 new versions are named by year (ECMAScript 2016 / 2017 / 2018).
+
+                  New Features in ECMAScript 2018
+                  This chapter introduces the new features in ECMAScript 2018:
+
+                  Asynchronous Iteration
+                  Promise Finally
+                  Object Rest Properties
+                  New RegExp Features
+                  JavaScript Asynchronous Iteration
+                  ECMAScript 2018 added asynchronous iterators and iterables.
+
+                  With asynchronous iterables, we can use the await keyword in for/of loops.
+
+                  Example
+                  for await () {}</pre>
+                <pre>JavaScript Promise.finally
+                    ECMAScript 2018 finalizes the full implementation of the Promise object with Promise.finally:
+
+                    Example
+                    let myPromise = new Promise();
+
+                    myPromise.then();
+                    myPromise.catch();
+                    myPromise.finally();</pre>
+                <pre>JavaScript Object Rest Properties
+                      ECMAScript 2018 added rest properties.
+
+                      This allows us to destruct an object and collect the leftovers onto a new object:
+
+                      Example
+                      let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+                      x; // 1
+                      y; // 2
+                      z; // { a: 3, b: 4 }</pre>
+                <pre>New JavaScript RegExp Features
+                        ECMAScript 2018 added 4 new RegExp features:
+
+                        Unicode Property Escapes (\p{...})
+                        Lookbehind Assertions (?<= ) and (?<! )
+                        Named Capture Groups
+                        s (dotAll) Flag</pre>
+
 
                 <h2 class="naslovi">JavaScript IE/EDGE</h2>
+
+                <pre>Internet Explorer Retirement
+                  Windows 11 Removes Internet Explorer
+                  Reported 24-06-2021:
+                  Internet Explorer is disabled in Windows 11
+
+                  Source: Windows 11 specifications
+                  Windows 10 Replaces Internet Explorer
+                  Reported 15-06-2020:
+                  Internet Explorer is "replaced" by Edge in Windows 10
+
+                  Source ...
+                  Internet Explorer Retires
+                  Reported 15-06-2020:
+                  IE 11 goes out of support on June 15 2022
+
+                  Source ...
+                  Retirement Dates:
+                  30-11-2020	MS Teams ends support for IE 11
+                  31-12-2020	Azure DevOps Services ends support for IE 11
+                  31-03-2021	Azure Portal ends support for IE 11
+                  17-08-2021	Microsoft ends support for IE 11 across web services:
+                  Office 365 - OneDrive Outlook
+                  15-06-2022	Microsoft ends all support for IE 11
+                  Source ...
+
+                  bbb
+                  Microsoft Edge Legacy
+                  Edge was the default browser for Windows 10.
+
+                  It was built with Microsoft's browser engine EdgeHTML and their Chakra JavaScript engine.
+
+                  The first versions of Edge (12-18), are now referred to as "Edge Legacy".
+
+                  The Microsoft support for Edge Legacy ended on March 9, 2021.
+
+                  Future Windows updates will replace Edge Legacy with The New Edge.
+
+                  Retirement dates published August 17, 2020:
+                  31-12-2020	Azure DevOps Services stops supporting Edge Legacy
+                  09-03-2021	End of Windows updates for Edge Legacy
+                  13-04-2021	Future Windows updates will remove Edge Legacy
+                  Source ...
+
+                  The New Edge
+                  The new Microsoft Edge is Chromium based with Blink and V8 engines.
+
+                  It was released in January 2020, and is available for Windows 7, 8, and 10.
+
+                  It can also be downloaded for macOS, iOS, and Android.
+
+                  The new Edge follows the Modern Lifecycle Policy (updates on an approx. six-week cycle).
+
+                  Developers Support?
+                  IE 11 is still a component of many Windows operating system and follows the Lifecycle Policy for the product on which it is installed:
+
+                  System	Default Browser
+                  Windows Embedded Compact 7	Internet Explorer 7
+                  Windows Embedded Compact 2013	Internet Explorer 7
+                  Windows 7	Internet Explorer 11
+                  Windows 8.X	Internet Explorer 11
+                  Windows 10	Internet Explorer 11
+                  Windows Server 2012	Internet Explorer 11
+                  Windows Server 2012 R2	Internet Explorer 11
+                  Windows Server 2016	Internet Explorer 11
+                  Windows Embedded Standard 7	Internet Explorer 11
+                  Windows Embedded POSReady 7	Internet Explorer 11
+                  Windows Thin PC	Internet Explorer 11
+                  Windows Embedded 8 Standard	Internet Explorer 11
+                  Windows 8.1 Industry Update	Internet Explorer 11
+                  Older Applications
+                  Many older PCs (like in public libraries) are still using Internet Explorer.
+
+                  Many legacy web applications are using Internet Explorer.
+
+                  Many legacy web applications are using Internet Explorer runtime DLLs.
+
+                  Many AJAX based applications are using Microsoft ActiveX components.
+
+                  In order to ease the migration from Internet Explorer, Microsoft Edge offers Internet Explorer Mode, providing backward compatibility and enabling customers to continue to run legacy web applications.</pre>
+
+
+
                 <h2 class="naslovi">JavaScript History</h2>
 
+                <pre>JavaScript / ECMAScript
+                  JavaScript was invented by Brendan Eich in 1995.
+
+                  It was developed for Netscape 2, and became the ECMA-262 standard in 1997.
+
+                  After Netscape handed JavaScript over to ECMA, the Mozilla foundation continued to develop JavaScript for the Firefox browser. Mozilla's latest version was 1.8.5. (Identical to ES5).
+
+                  Internet Explorer (IE4) was the first browser to support ECMA-262 Edition 1 (ES1).
+
+                  Year	ECMA	Browser
+                  1995	 	JavaScript was invented by Brendan Eich
+                  1996	 	Netscape 2 was released with JavaScript 1.0
+                  1997	 	JavaScript became an ECMA standard (ECMA-262)
+                  1997	ES1	ECMAScript 1 was released
+                  1997	ES1	IE 4 was the first browser to support ES1
+                  1998	ES2	ECMAScript 2 was released
+                  1998	 	Netscape 42 was released with JavaScript 1.3
+                  1999	ES2	IE 5 was the first browser to support ES2
+                  1999	ES3	ECMAScript 3 was released
+                  2000	ES3	IE 5.5 was the first browser to support ES3
+                  2000	 	Netscape 62 was released with JavaScript 1.5
+                  2000	 	Firefox 1 was released with JavaScript 1.5
+                  2008	ES4	ECMAScript 4 was abandoned
+                  2009	ES5	ECMAScript 5 was released
+                  2011	ES5	IE 9 was the first browser to support ES5 *
+                  2011	ES5	Firefox 4 was released with JavaScript 1.8.5
+                  2012	ES5	Full support for ES5 in Safari 6
+                  2012	ES5	Full support for ES5 in IE 10
+                  2012	ES5	Full support for ES5 in Chrome 23
+                  2013	ES5	Full support for ES5 in Firefox 21
+                  2013	ES5	Full support for ES5 in Opera 15
+                  2014	ES5	Full support for ES5 in all browsers
+                  2015	ES6	ECMAScript 6 was released
+                  2016	ES6	Full support for ES6 in Chrome 51
+                  2016	ES6	Full support for ES6 in Opera 38
+                  2016	ES6	Full support for ES6 in Edge 14
+                  2016	ES6	Full support for ES6 in Safari 10
+                  2015	ES6	Full support for ES6 in Firefox 52
+                  2018	ES6	Full support for ES6 in all browsers **
+                  Note
+                  * Internet Explorer 9 did not support ES5 "use strict".
+
+                  ** Internet Explorer 11 does not support ES6.
+
+                  The ECMA Technical Committee 39
+                  In 1996, Netscape and Brendan Eich took JavaScript to the ECMA international standards organization, and a technical committee (TC39) was created to develop the language.
+
+                  ECMA-262 Edition 1 was released in June 1997.
+
+                  From ES4 to ES6
+                  When the TC39 committee got together in Oslo in 2008, to agree on ECMAScript 4, they were divided into 2 very different camps:
+
+                  The ECMAScript 3.1 Camp:
+                  Microsoft and Yahoo who wanted an incremental upgrade from ES3.
+
+                  The ECMAScript 4 Camp:
+                  Adobe, Mozilla, Opera, and Google who wanted a massive ES4 upgrade.
+
+                  August 13 2008, Brendan Eich wrote an email:
+
+                  It's no secret that the JavaScript standards body, Ecma's Technical Committee 39, has been split for over a year, with some members favoring ES4, a major fourth edition to ECMA-262, and others advocating ES3.1 based on the existing ECMA-262 Edition 3 (ES3) specification. Now, I'm happy to report, the split is over.
+
+                  The solution was to work together:
+
+                  ECMAScript 4 was renamed to ES5
+                  ES5 should be an incremental upgrade of ECMAScript 3.
+                  Features of ECMAScript 4 should be picked up in later versions.
+                  TC39 should develop a new major release, bigger in scope than ES5.
+                  The planned new release (ES6) was codenamed "Harmony" (Because of the split it created?).</pre>
+
+
+
+                <h2 class="naslovi">JavaScript Objects</h2>
+
+                <pre>In JavaScript, objects are king. If you understand objects, you understand JavaScript.
+
+                  In JavaScript, almost "everything" is an object.
+
+                  Booleans can be objects (if defined with the new keyword)
+                  Numbers can be objects (if defined with the new keyword)
+                  Strings can be objects (if defined with the new keyword)
+                  Dates are always objects
+                  Maths are always objects
+                  Regular expressions are always objects
+                  Arrays are always objects
+                  Functions are always objects
+                  Objects are always objects
+                  All JavaScript values, except primitives, are objects.
+
+                  JavaScript Primitives
+                  A primitive value is a value that has no properties or methods.
+
+                  A primitive data type is data that has a primitive value.
+
+                  JavaScript defines 5 types of primitive data types:
+
+                  string
+                  number
+                  boolean
+                  null
+                  undefined
+                  Primitive values are immutable (they are hardcoded and therefore cannot be changed).
+
+                  if x = 3.14, you can change the value of x. But you cannot change the value of 3.14.
+
+                  Value	Type	Comment
+                  "Hello"	string	"Hello" is always "Hello"
+                  3.14	number	3.14 is always 3.14
+                  true	boolean	true is always true
+                  false	boolean	false is always false
+                  null	null (object)	null is always null
+                  undefined	undefined	undefined is always undefined
+                  Objects are Variables
+                  JavaScript variables can contain single values:
+
+                  Example
+                  let person = "John Doe";</pre>
+
+                <a href="" target="_blank">JS_OBJECTS_</a><br>
+
+                <pre>JavaScript variables can also contain many values.
+
+                  Objects are variables too. But objects can contain many values.
+
+                  Object values are written as name : value pairs (name and value separated by a colon).
+
+                  Example
+                  let person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</pre>
+                <a href="" target="_blank">JS_OBJECTS_</a><br>
+                <pre>A JavaScript object is a collection of named values
+
+                  It is a common practice to declare objects with the const keyword.
+
+                  Example
+                  const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</pre>
+                <a href="" target="_blank">JS_OBJECTS_</a><br>
+                <pre>Object Properties
+                  The named values, in JavaScript objects, are called properties.
+
+                  Property	Value
+                  firstName	John
+                  lastName	Doe
+                  age	50
+                  eyeColor	blue
+                  Objects written as name value pairs are similar to:
+
+                  Associative arrays in PHP
+                  Dictionaries in Python
+                  Hash tables in C
+                  Hash maps in Java
+                  Hashes in Ruby and Perl
+                  Object Methods
+                  Methods are actions that can be performed on objects.
+
+                  Object properties can be both primitive values, other objects, and functions.
+
+                  An object method is an object property containing a function definition.
+
+                  Property	Value
+                  firstName	John
+                  lastName	Doe
+                  age	50
+                  eyeColor	blue
+                  fullName	function() {return this.firstName + " " + this.lastName;}
+                  JavaScript objects are containers for named values, called properties and methods.
+
+                  You will learn more about methods in the next chapters.
+
+                  Creating a JavaScript Object
+                  With JavaScript, you can define and create your own objects.
+
+                  There are different ways to create new objects:
+
+                  Create a single object, using an object literal.
+                  Create a single object, with the keyword new.
+                  Define an object constructor, and then create objects of the constructed type.
+                  Create an object using Object.create().
+                  Using an Object Literal
+                  This is the easiest way to create a JavaScript Object.
+
+                  Using an object literal, you both define and create an object in one statement.
+
+                  An object literal is a list of name:value pairs (like age:50) inside curly braces {}.
+
+                  The following example creates a new JavaScript object with four properties:
+
+                  Example
+                  const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</pre>
+                <a href="" target="_blank">JS_OBJECTS_</a><br>
+                <pre>Spaces and line breaks are not important. An object definition can span multiple lines:
+
+                  Example
+                  const person = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    age: 50,
+                    eyeColor: "blue"
+                  };
+                  </pre>
+                <a href="" target="_blank">JS_OBJECTS_</a><br>
+                <pre>This example creates an empty JavaScript object, and then adds 4 properties:
+
+                  Example
+                  const person = {};
+                  person.firstName = "John";
+                  person.lastName = "Doe";
+                  person.age = 50;
+                  person.eyeColor = "blue";</pre>
+                <a href="" target="_blank">JS_OBJECTS_</a><br>
+                <pre>Using the JavaScript Keyword new
+                  The following example create a new JavaScript object using new Object(), and then adds 4 properties:
+
+                  Example
+                  const person = new Object();
+                  person.firstName = "John";
+                  person.lastName = "Doe";
+                  person.age = 50;
+                  person.eyeColor = "blue";</pre>
+                <a href="" target="_blank">JS_OBJECTS_</a><br>
+                <pre>The examples above do exactly the same.
+
+                  But there is no need to use new Object().
+
+                  For readability, simplicity and execution speed, use the object literal method.
+
+                  JavaScript Objects are Mutable
+                  Objects are mutable: They are addressed by reference, not by value.
+
+                  If person is an object, the following statement will not create a copy of person:
+
+                  const x = person;  // Will not create a copy of person.
+                  The object x is not a copy of person. It is person. Both x and person are the same object.
+
+                  Any changes to x will also change person, because x and person are the same object.
+
+                  Example
+                  const person = {
+                    firstName:"John",
+                    lastName:"Doe",
+                    age:50, eyeColor:"blue"
+                  }
+
+                  const x = person;
+                  x.age = 10;      // Will change both x.age and person.age
+                  </pre>
+                <a href="" target="_blank">JS_OBJECTS_</a><br>
+
+
+                <h2 class="naslovi">JavaScript </h2>
+
+
+
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
 
 
 
 
-
-                <a href="" target="_blank">JS_ES5_</a><br>
+                <a href="" target="_blank">JS__</a><br>
                 <a href="" target="_blank">JS__</a><br>
                 <a href="" target="_blank">JS__</a><br>
                 <a href="" target="_blank">JS__</a><br>
