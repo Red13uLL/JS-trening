@@ -4329,27 +4329,283 @@ switch (new Date().getDay()) {
 
                 <h2 class="naslovi">JavaScript Object Methods</h2>
 
-
-                <a href="" target="_blank">JS_Object Methods_</a><br>
-                <a href="" target="_blank">JS_Object Methods_</a><br>
-                <a href="" target="_blank">JS_Object Methods_</a><br>
-                <a href="" target="_blank">JS_Object Methods_</a><br>
-                <a href="" target="_blank">JS_Object Methods_</a><br>
-
-
-
-                <h2 class="naslovi">JavaScript </h2>
-                <h2 class="naslovi">JavaScript </h2>
-                <h2 class="naslovi">JavaScript </h2>
-                <h2 class="naslovi">JavaScript </h2>
-                <h2 class="naslovi">JavaScript </h2>
-                <h2 class="naslovi">JavaScript </h2>
-                <h2 class="naslovi">JavaScript </h2>
-
-
+                <pre>Example
+                  const person = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    id: 5566,
+                    fullName: function() {
+                      return this.firstName + " " + this.lastName;
+                    }
+                  };</pre>
 
 
                 <a href="" target="_blank">JS_Object Methods_</a><br>
+
+                <pre>What is this?
+                  In JavaScript, the this keyword refers to an object.
+
+                  Which object depends on how this is being invoked (used or called).
+
+                  The this keyword refers to different objects depending on how it is used:
+
+                  In an object method, this refers to the object.
+                  Alone, this refers to the global object.
+                  In a function, this refers to the global object.
+                  In a function, in strict mode, this is undefined.
+                  In an event, this refers to the element that received the event.
+                  Methods like call(), apply(), and bind() can refer this to any object.
+                  Note
+
+                  this is not a variable. It is a keyword. You cannot change the value of this.
+
+
+                  JavaScript Methods
+                  JavaScript methods are actions that can be performed on objects.
+
+                  A JavaScript method is a property containing a function definition.
+
+                  Property	Value
+                  firstName	John
+                  lastName	Doe
+                  age	50
+                  eyeColor	blue
+                  fullName	function() {return this.firstName + " " + this.lastName;}
+                  Methods are functions stored as object properties.
+
+                  Accessing Object Methods
+                  You access an object method with the following syntax:
+
+                  objectName.methodName()
+                  You will typically describe fullName() as a method of the person object, and fullName as a property.
+
+                  The fullName property will execute (as a function) when it is invoked with ().
+
+                  This example accesses the fullName() method of a person object:
+
+                  Example
+                  name = person.fullName();</pre>
+
+                <a href="" target="_blank">JS_Object Methods_</a><br>
+
+                <pre>If you access the fullName property, without (), it will return the function definition:
+
+                  Example
+                  name = person.fullName;</pre>
+
+                <a href="" target="_blank">JS_Object Methods_</a><br>
+
+                <pre>Adding a Method to an Object
+                  Adding a new method to an object is easy:
+
+                  Example
+                  person.name = function () {
+                    return this.firstName + " " + this.lastName;
+                  };</pre>
+
+                <a href="" target="_blank">JS_Object Methods_</a><br>
+
+                <pre>Using Built-In Methods
+                  This example uses the toUpperCase() method of the String object, to convert a text to uppercase:
+
+                  let message = "Hello world!";
+                  let x = message.toUpperCase();
+                  The value of x, after execution of the code above will be:
+
+                  HELLO WORLD!
+                  Example
+                  person.name = function () {
+                    return (this.firstName + " " + this.lastName).toUpperCase();
+                  };</pre>
+
+                <a href="" target="_blank">JS_Object Methods_</a><br>
+
+
+
+                <h2 class="naslovi">JavaScript Display Objects</h2>
+
+                <pre>How to Display JavaScript Objects?
+                  Displaying a JavaScript object will output [object Object].
+
+                  Example
+                  const person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                  };
+
+                  document.getElementById("demo").innerHTML = person;</pre>
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
+
+                <pre>Some common solutions to display JavaScript objects are:
+
+                  Displaying the Object Properties by name
+                  Displaying the Object Properties in a Loop
+                  Displaying the Object using Object.values()
+                  Displaying the Object using JSON.stringify()
+                  Displaying Object Properties
+                  The properties of an object can be displayed as a string:
+
+                  Example
+                  const person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                  };
+
+                  document.getElementById("demo").innerHTML =
+                  person.name + "," + person.age + "," + person.city;</pre>
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
+
+                <pre>Displaying the Object in a Loop
+                  The properties of an object can be collected in a loop:
+
+                  Example
+                  const person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                  };
+
+                  let txt = "";
+                  for (let x in person) {
+                  txt += person[x] + " ";
+                  };
+
+                  document.getElementById("demo").innerHTML = txt;</pre>
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
+
+                <pre>You must use person[x] in the loop.
+
+                  person.x will not work (Because x is a variable).
+
+                  Using Object.values()
+                  Any JavaScript object can be converted to an array using Object.values():
+
+                  const person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                  };
+
+                  const myArray = Object.values(person);
+                  myArray is now a JavaScript array, ready to be displayed:
+
+                  Example
+                  const person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                  };
+
+                  const myArray = Object.values(person);
+                  document.getElementById("demo").innerHTML = myArray;
+                  </pre>
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
+
+                <pre>Using JSON.stringify()
+                  Any JavaScript object can be stringified (converted to a string) with the JavaScript function JSON.stringify():
+
+                  const person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                  };
+
+                  let myString = JSON.stringify(person);
+                  myString is now a JavaScript string, ready to be displayed:
+
+                  Example
+                  const person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                  };
+
+                  let myString = JSON.stringify(person);
+                  document.getElementById("demo").innerHTML = myString;</pre>
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
+
+                <pre>The result will be a string following the JSON notation:
+
+                  {"name":"John","age":50,"city":"New York"}
+
+                  JSON.stringify() is included in JavaScript and supported in all major browsers.
+
+                  Stringify Dates
+                  JSON.stringify converts dates into strings:
+
+                  Example
+                  const person = {
+                    name: "John",
+                    today: new Date()
+                  };
+
+                  let myString = JSON.stringify(person);
+                  document.getElementById("demo").innerHTML = myString;</pre>
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
+
+                <pre>Stringify Functions
+                  JSON.stringify will not stringify functions:
+
+                  Example
+                  const person = {
+                    name: "John",
+                    age: function () {return 30;}
+                  };
+
+                  let myString = JSON.stringify(person);
+                  document.getElementById("demo").innerHTML = myString;</pre>
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
+
+                <pre>This can be "fixed" if you convert the functions into strings before stringifying.
+
+                  Example
+                  const person = {
+                    name: "John",
+                    age: function () {return 30;}
+                  };
+                  person.age = person.age.toString();
+
+                  let myString = JSON.stringify(person);
+                  document.getElementById("demo").innerHTML = myString;</pre>
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
+
+                <pre>Stringify Arrays
+                  It is also possible to stringify JavaScript arrays:
+
+                  Example
+                  const arr = ["John", "Peter", "Sally", "Jane"];
+
+                  let myString = JSON.stringify(arr);
+                  document.getElementById("demo").innerHTML = myString;</pre>
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
+
+
+
+
+
+
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+                <h2 class="naslovi">JavaScript </h2>
+
+
+
+
+                <a href="" target="_blank">JS_DisplayObjects_</a><br>
                 <a href="" target="_blank">JS__</a><br>
                 <a href="" target="_blank">JS__</a><br>
                 <a href="" target="_blank">JS__</a><br>
