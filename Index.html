@@ -5177,7 +5177,7 @@ switch (new Date().getDay()) {
 
 
 
-                <h2 class="naslovi">JavaScript Classes</h2>
+                <h2 class="naslovi">JavaScript Classes Intro</h2>
 
 
                 <a href="" target="_blank">JS_Classes_1</a><br>
@@ -5188,8 +5188,78 @@ switch (new Date().getDay()) {
 
                 <h2 class="naslovi">JavaScript Closures</h2>
 
+                <pre>JavaScript Class Syntax
+                  Use the keyword class to create a class.
+
+                  Always add a method named constructor():
+
+                  Syntax
+                  class ClassName {
+                    constructor() { ... }
+                  }
+                  Example
+                  class Car {
+                    constructor(name, year) {
+                      this.name = name;
+                      this.year = year;
+                    }
+                  }
+                  The example above creates a class named "Car".
+
+                  The class has two initial properties: "name" and "year".
+
+                  A JavaScript class is not an object.
+
+                  It is a template for JavaScript objects.</pre>
+
 
                 <a href="" target="_blank">JS_Classes_</a><br>
+
+                <pre>The example above uses the Car class to create two Car objects.
+
+                  The constructor method is called automatically when a new object is created.
+
+                  The Constructor Method
+                  The constructor method is a special method:
+
+                  It has to have the exact name "constructor"
+                  It is executed automatically when a new object is created
+                  It is used to initialize object properties
+                  If you do not define a constructor method, JavaScript will add an empty constructor method.
+
+                  Class Methods
+                  Class methods are created with the same syntax as object methods.
+
+                  Use the keyword class to create a class.
+
+                  Always add a constructor() method.
+
+                  Then add any number of methods.
+
+                  Syntax
+                  class ClassName {
+                    constructor() { ... }
+                    method_1() { ... }
+                    method_2() { ... }
+                    method_3() { ... }
+                  }
+                  Create a Class method named "age", that returns the Car age:
+
+                  Example
+                  class Car {
+                    constructor(name, year) {
+                      this.name = name;
+                      this.year = year;
+                    }
+                    age() {
+                      let date = new Date();
+                      return date.getFullYear() - this.year;
+                    }
+                  }
+
+                  let myCar = new Car("Ford", 2014);
+                  document.getElementById("demo").innerHTML =
+                  "My car is " + myCar.age() + " years old.";</pre>
                 <a href="" target="_blank">JS__</a><br>
                 <a href="" target="_blank">JS__</a><br>
                 <a href="" target="_blank">JS__</a><br>
