@@ -5552,7 +5552,283 @@ switch (new Date().getDay()) {
                   <p>(Wikipedia)</p></pre>
 
 
-                <h2 class="naslovi">JavaScript Classes Intro</h2>
+                <h2 class="naslovi">JavaScript Promise</h2>
+
+                <pre>"I Promise a Result!"
+
+                  "Producing code" is code that can take some time
+
+                  "Consuming code" is code that must wait for the result
+
+                  A Promise is a JavaScript object that links producing code and consuming code
+
+                  JavaScript Promise Object
+                  A JavaScript Promise object contains both the producing code and calls to the consuming code:
+
+                  Promise Syntax
+                  let myPromise = new Promise(function(myResolve, myReject) {
+                  // "Producing Code" (May take some time)
+
+                    myResolve(); // when successful
+                    myReject();  // when error
+                  });
+
+                  // "Consuming Code" (Must wait for a fulfilled Promise)
+                  myPromise.then(
+                    function(value) { /* code if successful */ },
+                    function(error) { /* code if some error */ }
+                  );
+                  When the producing code obtains the result, it should call one of the two callbacks:
+
+                  Result	Call
+                  Success	myResolve(result value)
+                  Error	myReject(error object)
+                  Promise Object Properties
+                  A JavaScript Promise object can be:
+
+                  Pending
+                  Fulfilled
+                  Rejected
+                  The Promise object supports two properties: state and result.
+
+                  While a Promise object is "pending" (working), the result is undefined.
+
+                  When a Promise object is "fulfilled", the result is a value.
+
+                  When a Promise object is "rejected", the result is an error object.
+
+                  myPromise.state	myPromise.result
+                  "pending"	undefined
+                  "fulfilled"	a result value
+                  "rejected"	an error object
+                  You cannot access the Promise properties state and result.
+
+                  You must use a Promise method to handle promises.
+
+                  Promise How To
+                  Here is how to use a Promise:
+
+                  myPromise.then(
+                    function(value) { /* code if successful */ },
+                    function(error) { /* code if some error */ }
+                  );
+                  Promise.then() takes two arguments, a callback for success and another for failure.
+
+                  Both are optional, so you can add a callback for success or failure only.</pre>
+
+                <a href="" target="_blank">JS_Promise_1</a><br>
+
+                <pre>JavaScript Promise Examples
+                    To demonstrate the use of promises, we will use the
+                    callback examples from the previous chapter:
+
+                    Waiting for a Timeout
+                    Waiting for a File
+
+
+
+                    Waiting for a Timeout
+                    Example Using Callback
+                    setTimeout(function() { myFunction("I love You !!!"); }, 3000);
+
+                    function myFunction(value) {
+                      document.getElementById("demo").innerHTML = value;
+                    }</pre>
+
+                <a href="" target="_blank">JS_Promise_2</a><br>
+
+                <pre>Example Using Promise
+                  let myPromise = new Promise(function(myResolve, myReject) {
+                    setTimeout(function() { myResolve("I love You !!"); }, 3000);
+                  });
+
+                  myPromise.then(function(value) {
+                    document.getElementById("demo").innerHTML = value;
+                  });</pre>
+
+
+                <a href="" target="_blank">JS_Promise_3</a><br>
+
+                <pre>Waiting for a file
+
+
+                  Example using Callback
+                  function getFile(myCallback) {
+                    let req = new XMLHttpRequest();
+                    req.open('GET', "mycar.html");
+                    req.onload = function() {
+                      if (req.status == 200) {
+                        myCallback(req.responseText);
+                      } else {
+                        myCallback("Error: " + req.status);
+                      }
+                    }
+                    req.send();
+                  }
+
+                  getFile(myDisplayer);</pre>
+
+                <a href="" target="_blank">JS_Promise_4</a><br>
+
+                <pre>Example using Promise
+                  let myPromise = new Promise(function(myResolve, myReject) {
+                    let req = new XMLHttpRequest();
+                    req.open('GET', "mycar.htm");
+                    req.onload = function() {
+                      if (req.status == 200) {
+                        myResolve(req.response);
+                      } else {
+                        myReject("File not Found");
+                      }
+                    };
+                    req.send();
+                  });
+
+                  myPromise.then(
+                    function(value) {myDisplayer(value);},
+                    function(error) {myDisplayer(error);}
+                  );</pre>
+
+
+                <a href="" target="_blank">JS_Promise_5</a><br>
+
+
+
+
+                <h2 class="naslovi">JavaScript Async</h2>
+
+
+
+                <pre>"async and await make promises easier to write"
+
+                  async makes a function return a Promise
+
+                  await makes a function wait for a Promise
+
+                  Async Syntax
+                  The keyword async before a function makes the function return a promise:
+
+                  Example
+                  async function myFunction() {
+                    return "Hello";
+                  }
+                  Is the same as:
+
+                  function myFunction() {
+                    return Promise.resolve("Hello");
+                  }
+                  Here is how to use the Promise:
+
+                  myFunction().then(
+                    function(value) { /* code if successful */ },
+                    function(error) { /* code if some error */ }
+                  );
+                  Example
+                  async function myFunction() {
+                    return "Hello";
+                  }
+                  myFunction().then(
+                    function(value) {myDisplayer(value);},
+                    function(error) {myDisplayer(error);}
+                  );
+
+                  </pre>
+
+
+                <a href="" target="_blank">JS_Async_1</a><br>
+
+                <pre>Or simpler, since you expect a normal value (a normal response, not an error):
+
+                  Example
+                  async function myFunction() {
+                    return "Hello";
+                  }
+                  myFunction().then(
+                    function(value) {myDisplayer(value);}
+                  );</Pre>
+
+                <a href="" target="_blank">JS_Async_2</a><br>
+
+                <pre>Await Syntax
+                  The keyword await before a function makes the function wait for a promise:
+
+                  let value = await promise;
+                  The await keyword can only be used inside an async function.
+
+                  Example
+                  Let's go slowly and learn how to use it.
+
+                  Basic Syntax
+                  async function myDisplay() {
+                    let myPromise = new Promise(function(resolve, reject) {
+                      resolve("I love You !!");
+                    });
+                    document.getElementById("demo").innerHTML = await myPromise;
+                  }
+
+                  myDisplay();
+
+                  </pre>
+                <a href="" target="_blank">JS_Async_3</a><br>
+
+                <pre>The two arguments (resolve and reject) are pre-defined by JavaScript.
+
+                  We will not create them, but call one of them when the executor function is ready.
+
+                  Very often we will not need a reject function.
+
+                  Example without reject
+                  async function myDisplay() {
+                    let myPromise = new Promise(function(resolve) {
+                      resolve("I love You !!");
+                    });
+                    document.getElementById("demo").innerHTML = await myPromise;
+                  }
+
+                  myDisplay();</pre>
+
+                <a href="" target="_blank">JS_Async_4</a><br>
+
+                <pre>Waiting for a Timeout
+                  async function myDisplay() {
+                    let myPromise = new Promise(function(resolve) {
+                      setTimeout(function() {resolve("I love You !!");}, 3000);
+                    });
+                    document.getElementById("demo").innerHTML = await myPromise;
+                  }
+
+                  myDisplay();</pre>
+
+                <a href="" target="_blank">JS_Async_5</a><br>
+                <pre>Waiting for a File
+                  async function getFile() {
+                    let myPromise = new Promise(function(resolve) {
+                      let req = new XMLHttpRequest();
+                      req.open('GET', "mycar.html");
+                      req.onload = function() {
+                        if (req.status == 200) {
+                          resolve(req.response);
+                        } else {
+                          resolve("File not Found");
+                        }
+                      };
+                      req.send();
+                    });
+                    document.getElementById("demo").innerHTML = await myPromise;
+                  }
+
+                  getFile();</pre>
+                <a href="" target="_blank">JS_Async_6</a><br>
+
+
+
+
+
+                <h2 class="naslovi">JavaScript Async</h2>
+                <h2 class="naslovi">JavaScript Async</h2>
+                <h2 class="naslovi">JavaScript Async</h2>
+                <h2 class="naslovi">JavaScript Async</h2>
+                <h2 class="naslovi">JavaScript Async</h2>
 
 
     </div>
